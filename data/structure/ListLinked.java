@@ -34,6 +34,18 @@ public class ListLinked {
         tail = node;
         size++;
     }
+    public Node getHead()
+    {
+        return head;
+    }  
+    public Node getTail()
+    {
+        return tail;
+    }
+     public int size()
+     {
+         return size;
+     }
 
     public String toString() {
         return "List={head={" + head + "},tail={" + tail + "},size={" + size + "}}";
