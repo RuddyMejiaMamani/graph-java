@@ -34,7 +34,7 @@ public class ListLinked<E> {
         tail = node;
         size++;
     }
-    public Node getHead()
+    /*public Node getHead()
     {
         return head;
     }  
@@ -45,7 +45,7 @@ public class ListLinked<E> {
      public int size()
      {
          return size;
-     }
+     }*/
 
     public void add(E data) {
         Node<E> node = new Node<>(data);

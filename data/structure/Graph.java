@@ -8,6 +8,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
 public class Graph {
     private boolean directed;
     // private boolean weighted;
@@ -105,6 +107,27 @@ public class Graph {
         System.out.println(output);
     }
 
+    /*public void printGraphMine()
+    {
+        ListLinked<Edge> edges;
+        for(int i=0;i<3;i++)
+        {
+            System.out.println(vertexs[i].getLabel()+":");
+            //Vertex vertice = vertexs[i];
+            edges = vertexs[i].getEdges();
+            Node<Edge> temp = edges.getHead();
+            System.out.println("numero de aristas: "+edges.size());
+            //while(temp != null)
+            //{
+                System.out.println(edges.getHead().getData().getV2().getLabel());
+                edges.getHead().getLink();
+            //}
+            
+        }
+    }*/
+
+    
+
     public void readFileInput(String filename) {
         String path = System.getProperty("user.dir") + "\\input\\" + filename;
         try {
@@ -158,11 +181,25 @@ public class Graph {
             System.err.println(e.getMessage());
         }
 
-        /*
-         */
 
     }
 
+    public void Show()
+    {
+        Node<Edge> aux;
+        for(int i=0;i<vertexs.length;i++)
+        {
+            System.out.print(vertexs[i].getLabel()+"->");
+
+            aux = vertexs[i].getEdges().getHead();
+
+
+            System.out.println("{"+aux.getData().getV2().getLabel()+"}"+"{"+aux.getLink().getData().getV2().getLabel()+"}");
+
+            aux = aux.getLink();
+        }
+    }
+    
     public static void main(String[] args) {
         Graph graph = new Graph(false);
 
@@ -181,5 +218,13 @@ public class Graph {
         graph.addVertex(Riberalta);
 
         graph.readFileInput("bolivia.txt");
+        graph.Show();
+        /*System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        graph.printGraph();*/
+
+        
     }
 }
+ 

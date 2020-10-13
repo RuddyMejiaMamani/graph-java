@@ -8,7 +8,7 @@ public class testGraph {
         Graph graph = new Graph(false);
         graph.readFileInput("bolivia.txt");
         graph.printGraph();
-        graph.BFS(graph.getVertexList().getHead().getData());
+        //graph.BFS(graph.getVertexList().getHead().getData());
     }
 
     public static void main(String[] args) {
