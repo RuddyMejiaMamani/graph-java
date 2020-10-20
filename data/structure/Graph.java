@@ -1,5 +1,4 @@
 package data.structure;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.LinkedList;
@@ -11,8 +10,7 @@ import java.util.regex.Pattern;
 
 
 public class Graph {
-    private boolean directed;
-    // private boolean weighted;
+    private boolean directed; 
     private ListLinked<Vertex> vertexList;
     private Vertex[] vertexs;
     private int numVertexs;
@@ -86,7 +84,7 @@ public class Graph {
     }
 
     public void DFS() {
-
+        
     }
 
     public void printGraph() {
@@ -106,27 +104,6 @@ public class Graph {
         }
         System.out.println(output);
     }
-
-    /*public void printGraphMine()
-    {
-        ListLinked<Edge> edges;
-        for(int i=0;i<3;i++)
-        {
-            System.out.println(vertexs[i].getLabel()+":");
-            //Vertex vertice = vertexs[i];
-            edges = vertexs[i].getEdges();
-            Node<Edge> temp = edges.getHead();
-            System.out.println("numero de aristas: "+edges.size());
-            //while(temp != null)
-            //{
-                System.out.println(edges.getHead().getData().getV2().getLabel());
-                edges.getHead().getLink();
-            //}
-            
-        }
-    }*/
-
-    
 
     public void readFileInput(String filename) {
         String path = System.getProperty("user.dir") + "\\input\\" + filename;
@@ -157,8 +134,7 @@ public class Graph {
                     Vertex vertex = new Vertex(matcher.group(2));
                     addVertex(vertex);
                     vertexs[Integer.parseInt(matcher.group(1))] = vertex;
-                }
-                // System.out.println(line);
+                }                
             }
 
             // Obteniendo las lineas de informacion de aristas
@@ -180,8 +156,6 @@ public class Graph {
         } catch (FileNotFoundException e) {
             System.err.println(e.getMessage());
         }
-
-
     }
 
     public void Show()
@@ -218,13 +192,6 @@ public class Graph {
         graph.addVertex(Riberalta);
 
         graph.readFileInput("bolivia.txt");
-        graph.Show();
-        /*System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        graph.printGraph();*/
-
-        
+        graph.Show();        
     }
 }
- 
