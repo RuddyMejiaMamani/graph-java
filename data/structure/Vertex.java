@@ -6,9 +6,6 @@ public class Vertex {
     private String label;
     private ListLinked<Edge> edges;
     private State state;
-    // 1
-    // 2
-    // 3
 
     public Vertex(String label) {
         this.label = label;
