@@ -33,6 +33,7 @@ public class ListLinked<E> {
         }
         tail = node;
         size++;
+        
     }
     public void add(E data) {
         Node<E> node = new Node<>(data);
